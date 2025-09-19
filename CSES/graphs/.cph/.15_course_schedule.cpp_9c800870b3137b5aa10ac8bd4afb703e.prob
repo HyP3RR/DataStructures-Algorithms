@@ -1,0 +1,1 @@
+{"name":"Local: 15_course_schedule","url":"/home/hyprat/src/DataStructures-Algorithms/CSES/graphs/15_course_schedule.cpp","tests":[{"id":1758292162999,"input":"5 3\n1 2\n3 1\n4 5\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/hyprat/src/DataStructures-Algorithms/CSES/graphs/15_course_schedule.cpp","group":"local","local":true}

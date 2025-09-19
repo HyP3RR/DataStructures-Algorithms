@@ -4,6 +4,14 @@
 using namespace std;
 
 int main() {
+    /*
+    if l...r has <= k  distinct val, so does all its subarrays
+    maintain a queue with <= k distinct val ending at r,
+    then add all possible subarrays ending at r..
+    since any j < l will introduce more distinct values,
+    this two pointer property holds.
+    */
+
     ll n, k;
     cin >> n >> k;
     vector<ll> a(n);
