@@ -18,7 +18,7 @@ int main() {
         v--;
         adj[u].push_back(v);
     }
-    vector<ll> par(n, 0);
+    vector<ll> par(n, -1);
     par[0] = -1;
     vector<ll> dist(n, 0);
     dist[0] = 0;
@@ -39,15 +39,20 @@ int main() {
             }
         }
     }
+
     vector<int> ans;
     int i = n - 1;
-    while (par[i] != -1) {
-        ans.push_back(i);
-        i = par[i];
+    if (par[i] == -1) {
+        cout << "IMPOSSIBLE \n";
+    } else {
+        while (par[i] != -1) {
+            ans.push_back(i);
+            i = par[i];
+        }
+        ans.push_back(0);
+        cout << ans.size() << "\n";
+        reverse(ans.begin(), ans.end());
+        for (auto &x : ans)
+            cout << 1 + x << " ";
     }
-    ans.push_back(0);
-    cout << ans.size() << "\n";
-    reverse(ans.begin(), ans.end());
-    for (auto &x : ans)
-        cout << 1 + x << " ";
 }
